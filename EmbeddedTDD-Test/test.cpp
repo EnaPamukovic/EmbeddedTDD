@@ -3,7 +3,7 @@
 #include <memory>
 
 #include "../EmbeddedTDD/LinkController.h"
-#include "../EmbeddedTDD-Test/IdManagerMock.h"
+#include "IdManagerMock.h"
 
 using ::testing::_;
 using::testing::Return;
@@ -39,7 +39,8 @@ TEST_F(LinkControllerTest, ActivateSuccess) {
 	//IdManagerMock idManager;
 
 	//EXPECT_CALL(idManager, getLinkId(_)).Times(1);
-	m_link_controller->activate("link_a");
+	//leaked mock 
+	m_link_controller->activate("link_a"); //vamo nije primia dependency u getInstance
 
 }
 

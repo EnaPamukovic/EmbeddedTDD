@@ -8,34 +8,14 @@
 class LinkControllerAPI {
 public:
 	/**
-	 * LinkControllerAPI destructor
-	 */
-	virtual ~LinkControllerAPI() = default;
-
-	/**
 	 * LinkControllerAPI constructor
 	 */
 	LinkControllerAPI() = default;
-
+	
 	/**
-	 * LinkControllerAPI copy constructor
-	 */
-	LinkControllerAPI(LinkControllerAPI const&) = delete;
-
-	/**
-	 * LinkControllerAPI move constructor
-	 */
-	LinkControllerAPI(LinkControllerAPI&&) = delete;
-
-	/**
-	 * LinkControllerAPI copy assingment operator
-	 */
-	LinkControllerAPI& operator=(LinkControllerAPI const&) = delete;
-
-	/**
-	 * LinkControllerAPI move assingment operator
-	 */
-	LinkControllerAPI& operator=(LinkControllerAPI&&) = delete;
+     * LinkControllerAPI destructor
+     */
+	virtual ~LinkControllerAPI() = default;
 
 	/**
 	 * Global point of access to LinkControllerAPI single instance

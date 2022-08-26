@@ -10,36 +10,13 @@ public:
 	/**
      * IdManagerAPI destructor
      */
-	virtual ~IdManagerAPI() = default;
-
-	/**
-	 * IdManagerAPI constructor
-	 */
-	IdManagerAPI() = default;
-
-	/**
-     * IdManagerAPI copy constructor
-     */
-	IdManagerAPI(IdManagerAPI const &) = delete;
-
-	/**
-	 * IdManagerAPI move constructor
-	 */
-	IdManagerAPI(IdManagerAPI &&) = delete;
-
-	/**
-	 * IdManagerAPI copy assingment operator
-	 */
-	IdManagerAPI &operator=(IdManagerAPI const&) = delete;
-
-	/**
-     * IdManagerAPI move assingment operator
-     */
-	IdManagerAPI &operator=(IdManagerAPI &&) = delete;
+	virtual ~IdManagerAPI() {}
 
 	/**
 	 * Get link ID
 	 */
 	virtual int getLinkId(std::string link_name) = 0;
+
+	//TODO:dodat neku listu koja sprema parove name,id
 };
 #endif

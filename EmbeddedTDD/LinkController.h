@@ -4,39 +4,27 @@
 
 #include "LinkControllerAPI.h"
 
+#include "IdManagerAPI.h"
+#include "LinkConfiguratorAPI.h"
+
 namespace impl {
 
 class LinkController : public LinkControllerAPI, public std::enable_shared_from_this<LinkController> {
 public:
 	/**
-	 * LinkController constructor
-	 */
+     * LinkController default constructor
+     */
 	LinkController();
 
 	/**
-	 * LinkController copy constructor
+	 * LinkController constructor
 	 */
-	LinkController(LinkController const&) = delete;
-
-	/**
-	 * LinkController move constructor
-	 */
-	LinkController(LinkController&&) = delete;
+	LinkController(std::shared_ptr<IdManagerAPI> id_manager, std::shared_ptr<LinkConfiguratorAPI> link_configurator);
 
 	/**
      * LinkController destructor
      */
 	~LinkController() = default;
-
-	/**
-	 * LinkController copy assingment operator
-	 */
-	LinkController& operator=(LinkController const&) = delete;
-
-	/**
-	 * LinkController move assingment operator
-	 */
-	LinkController& operator=(LinkController&&) = delete;
 
 	/**
 	 * Activate link

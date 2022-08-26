@@ -8,14 +8,14 @@
 class LinkConfiguratorAPI {
 public:
 	/**
+     * LinkConfiguratorrAPI constructor
+     */
+	LinkConfiguratorAPI() = default;
+
+	/**
 	 * LinkConfiguratorAPI destructor
 	 */
 	virtual ~LinkConfiguratorAPI() = default;
-
-	/**
-	 * LinkConfiguratorrAPI constructor
-	 */
-	LinkConfiguratorAPI() = default;
 
 	/**
 	 * Activate link
@@ -31,5 +31,7 @@ public:
      * Return true if link is activated
      */
 	virtual bool isActivated(int link_id) = 0;
+
+	//TODO:dodat neku listu di su spremljeni aktivirani linkovi
 };
 #endif

@@ -12,7 +12,6 @@ std::shared_ptr<LinkConfiguratorAPI> link_configurator_sp = nullptr;
 
 std::shared_ptr<LinkControllerAPI> LinkControllerAPI::getInstance() {
 	if (link_controller_sp == nullptr) {
-		//ovo nije dobro:
 		link_controller_sp = std::make_shared<impl::LinkController>(id_manager_sp, link_configurator_sp);
 	}
 	return link_controller_sp;
