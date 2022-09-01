@@ -5,6 +5,9 @@
 #include <string>
 #include <memory>
 
+#include "IdManagerAPI.h"
+#include "LinkConfiguratorAPI.h"
+
 class LinkControllerAPI {
 public:
 	/**
@@ -28,9 +31,14 @@ public:
 	static void freeInstance();
 
 	/**
+	 * Get IdManagerAPI instance
+	 */
+	virtual std::shared_ptr<IdManagerAPI> getIdManagerInstance() = 0;
+
+	/**
      * Activate link
      */
-	virtual bool activate(std::string link_name) = 0;
+	virtual bool activate(std::string link_name, std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI> link_configurator_sp) = 0;
 };
 
 #endif

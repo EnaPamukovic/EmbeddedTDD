@@ -17,6 +17,9 @@
     <ClInclude Include="MockSingletonAPI.h">
       <Filter>Mocks</Filter>
     </ClInclude>
+    <ClInclude Include="LinkConfiguratorMock.h">
+      <Filter>Mocks</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Mocks">

@@ -11,11 +11,11 @@ public:
 	MOCK_METHOD(int, getLinkId, (std::string link_name), (override));
 };
 
-/*#define CreateMockIdManager() \
+#define CreateMockIdManager() \
 	MockSingletonAPI<testing::StrictMock<IdManagerMock>>::createMockObject()
 #define GetMockIdManager() \
 	MockSingletonAPI<testing::StrictMock<IdManagerMock>>::getMockObject()
 #define DeleteMockIdManager() \
-	MockSingletonAPI<testing::StrictMock<IdManagerMock>>::deleteMockObject()*/
+	MockSingletonAPI<testing::StrictMock<IdManagerMock>>::deleteMockObject()
 
 #endif
