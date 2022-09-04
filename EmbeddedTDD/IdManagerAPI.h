@@ -10,13 +10,11 @@ public:
 	/**
      * IdManagerAPI destructor
      */
-	virtual ~IdManagerAPI() {}
+	virtual ~IdManagerAPI() = default;
 
 	/**
 	 * Get link ID
 	 */
 	virtual int getLinkId(std::string link_name) = 0;
-
-	//TODO:dodat neku listu koja sprema parove name,id
 };
 #endif

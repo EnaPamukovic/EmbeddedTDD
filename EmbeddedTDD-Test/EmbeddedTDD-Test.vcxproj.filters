@@ -3,27 +3,36 @@
   <ItemGroup>
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="IdManagerMock.cpp">
-      <Filter>Mocks</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\gtest\gtest-all.cc" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\gmock\gmock-all.cc" />
+    <ClCompile Include="IdManagerFake.cpp">
+      <Filter>Fakes</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkConfiguratorFake.cpp">
+      <Filter>Fakes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="IdManagerMock.h">
       <Filter>Mocks</Filter>
     </ClInclude>
-    <ClInclude Include="MockSingletonAPI.h">
-      <Filter>Mocks</Filter>
-    </ClInclude>
     <ClInclude Include="LinkConfiguratorMock.h">
       <Filter>Mocks</Filter>
+    </ClInclude>
+    <ClInclude Include="IdManagerFake.h">
+      <Filter>Fakes</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkConfiguratorFake.h">
+      <Filter>Fakes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Mocks">
       <UniqueIdentifier>{38949cf4-c3e4-4c66-80e9-082636fe4764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fakes">
+      <UniqueIdentifier>{a8c53c81-e186-4373-a7c2-bbf631667d34}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

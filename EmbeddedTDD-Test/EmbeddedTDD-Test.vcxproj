@@ -36,13 +36,15 @@
     <IncludePath>C:\Users\Public\source\repo\EmbeddedTDD\EmbeddedTDD;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
+    <ClInclude Include="IdManagerFake.h" />
     <ClInclude Include="IdManagerMock.h" />
+    <ClInclude Include="LinkConfiguratorFake.h" />
     <ClInclude Include="LinkConfiguratorMock.h" />
-    <ClInclude Include="MockSingletonAPI.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IdManagerMock.cpp" />
+    <ClCompile Include="IdManagerFake.cpp" />
+    <ClCompile Include="LinkConfiguratorFake.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

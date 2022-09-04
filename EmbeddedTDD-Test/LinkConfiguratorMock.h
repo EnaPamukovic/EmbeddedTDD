@@ -12,8 +12,6 @@ public:
 	MOCK_METHOD(bool, activate, (int link_id), (override));
 
 	MOCK_METHOD(bool, deactivate, (int link_id), (override));
-
-	MOCK_METHOD(bool, isActivated, (int link_id), (override));
 };
 
 #endif

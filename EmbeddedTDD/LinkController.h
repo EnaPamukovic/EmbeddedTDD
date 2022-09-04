@@ -19,26 +19,19 @@ public:
 	LinkController();
 
 	/**
-	 * LinkController constructor
-	 */
-	//LinkController(std::shared_ptr<IdManagerAPI> id_manager, std::shared_ptr<LinkConfiguratorAPI> link_configurator);
-
-	/**
      * LinkController destructor
      */
 	~LinkController() = default;
-
-	/**
-	 * Get IdManagerAPI instance
-	 */
-	std::shared_ptr<IdManagerAPI> getIdManagerInstance() override;
 
 	/**
 	 * Activate link
 	 */
 	bool activate(std::string link_name, std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI> link_configurator_sp);
 
-	std::shared_ptr<IdManagerAPI> m_id_manager_sp;
+	/**
+	 * Deactivate link
+	 */
+	bool deactivate(std::string link_name, std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI> link_configurator_sp);
 	
 private:
 	std::list<std::string> m_activated_links;
