@@ -22,8 +22,6 @@ namespace impl {
 		 * Deactivate link
 		 */
 		bool deactivate(int link_id);
-
-	private:
 	};
 }
 #endif

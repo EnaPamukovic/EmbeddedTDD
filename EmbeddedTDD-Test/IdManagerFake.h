@@ -24,7 +24,7 @@ namespace impl {
 
 	private:
 		std::map<std::string, int> m_link_data = 
-		{ {"link_a", 100}, {"link_b", 101}, {"link_c", 103}, {"link_1", 1000}, {"link_2", 1001} };
+		{ {"link_a", 100}, {"link_b", 101}, {"link_c", 103}, {"link_1", 1000}, {"link_2", 1001}, {"link_3", 1002}};
 	};
 }
 #endif

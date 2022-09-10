@@ -11,6 +11,12 @@
     <ClCompile Include="LinkConfiguratorFake.cpp">
       <Filter>Fakes</Filter>
     </ClCompile>
+    <ClCompile Include="IdManagerStub.cpp">
+      <Filter>Stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkConfiguratorStub.cpp">
+      <Filter>Stubs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -26,6 +32,12 @@
     <ClInclude Include="LinkConfiguratorFake.h">
       <Filter>Fakes</Filter>
     </ClInclude>
+    <ClInclude Include="IdManagerStub.h">
+      <Filter>Stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkConfiguratorStub.h">
+      <Filter>Stubs</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Mocks">
@@ -33,6 +45,9 @@
     </Filter>
     <Filter Include="Fakes">
       <UniqueIdentifier>{a8c53c81-e186-4373-a7c2-bbf631667d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stubs">
+      <UniqueIdentifier>{65d574b5-8eb5-4302-ab0e-9372fdff0ba7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

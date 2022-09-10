@@ -38,13 +38,17 @@
   <ItemGroup>
     <ClInclude Include="IdManagerFake.h" />
     <ClInclude Include="IdManagerMock.h" />
+    <ClInclude Include="IdManagerStub.h" />
     <ClInclude Include="LinkConfiguratorFake.h" />
     <ClInclude Include="LinkConfiguratorMock.h" />
+    <ClInclude Include="LinkConfiguratorStub.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IdManagerFake.cpp" />
+    <ClCompile Include="IdManagerStub.cpp" />
     <ClCompile Include="LinkConfiguratorFake.cpp" />
+    <ClCompile Include="LinkConfiguratorStub.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
