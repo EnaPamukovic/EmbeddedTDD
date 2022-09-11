@@ -7,8 +7,6 @@
 
 #include "../EmbeddedTDD/IdManagerAPI.h"
 
-#include <map>
-
 namespace impl {
 
 	class IdManagerStub : public IdManagerAPI, public std::enable_shared_from_this<IdManagerStub> {

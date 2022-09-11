@@ -2,6 +2,8 @@
 #ifndef LINK_CONFIGURATOR_STUB_H
 #define LINK_CONFIGURATOR_STUB_H
 
+#include <gtest/gtest.h>
+
 #include "../EmbeddedTDD/LinkConfiguratorAPI.h"
 
 namespace impl {

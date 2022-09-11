@@ -8,9 +8,6 @@
     <ClCompile Include="IdManagerFake.cpp">
       <Filter>Fakes</Filter>
     </ClCompile>
-    <ClCompile Include="LinkConfiguratorFake.cpp">
-      <Filter>Fakes</Filter>
-    </ClCompile>
     <ClCompile Include="IdManagerStub.cpp">
       <Filter>Stubs</Filter>
     </ClCompile>
@@ -27,9 +24,6 @@
       <Filter>Mocks</Filter>
     </ClInclude>
     <ClInclude Include="IdManagerFake.h">
-      <Filter>Fakes</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkConfiguratorFake.h">
       <Filter>Fakes</Filter>
     </ClInclude>
     <ClInclude Include="IdManagerStub.h">

@@ -2,16 +2,8 @@
 #ifndef LINK_CONFIGURATOR_API_H
 #define LINK_CONFIGURATOR_API_H
 
-#include <string>
-#include <memory>
-
 class LinkConfiguratorAPI {
 public:
-	/**
-	 * LinkConfiguratorAPI destructor
-	 */
-	virtual ~LinkConfiguratorAPI() = default;
-
 	/**
 	 * Activate link
 	 */

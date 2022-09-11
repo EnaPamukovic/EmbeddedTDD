@@ -4,9 +4,6 @@
 
 #include "LinkControllerAPI.h"
 
-#include "IdManagerAPI.h"
-#include "LinkConfiguratorAPI.h"
-
 #include <list>
 
 namespace impl {
