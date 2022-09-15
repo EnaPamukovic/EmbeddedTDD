@@ -21,16 +21,24 @@ public:
 	~LinkController() = default;
 
 	/**
+     * Initialize the LinkControllerAPI.
+     */
+	void init(std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI>);
+
+	/**
 	 * Activate link
 	 */
-	bool activate(std::string link_name, std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI> link_configurator_sp);
+	bool activate(std::string link_name);
 
 	/**
 	 * Deactivate link
 	 */
-	bool deactivate(std::string link_name, std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI> link_configurator_sp);
+	bool deactivate(std::string link_name);
 	
 private:
+	std::shared_ptr<IdManagerAPI> m_id_manager_sp;
+	std::shared_ptr<LinkConfiguratorAPI> m_link_configurator_sp;
+
 	std::list<std::string> m_activated_links;
 };
 }

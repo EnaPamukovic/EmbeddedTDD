@@ -21,13 +21,18 @@ void LinkControllerAPI::freeInstance() {
 namespace impl {
 	LinkController::LinkController() {}
 
-bool LinkController::activate(std::string link_name, std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI> link_configurator_sp) {
+	void LinkController::init(std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI> link_configurator_sp) {
+		m_id_manager_sp = id_manager_sp;
+		m_link_configurator_sp = link_configurator_sp;
+	}
+
+bool LinkController::activate(std::string link_name) {
 	if (link_name.empty()) {
 		std::cout << "Empty link name!\n";
 		return false;
 	}
 
-	int id = id_manager_sp->getLinkId(link_name);
+	int id = m_id_manager_sp->getLinkId(link_name);
 	if (id == INVALID_ID) {
 		std::cout << "Invalid link name: '" << link_name << "'\n";
 		return false;
@@ -39,7 +44,7 @@ bool LinkController::activate(std::string link_name, std::shared_ptr<IdManagerAP
 		return false;
 	}
 	
-	if (link_configurator_sp->activate(id)) {
+	if (m_link_configurator_sp->activate(id)) {
 		m_activated_links.push_back(link_name);
 		std::cout << "Activation successful!\n";
 		return true;
@@ -48,13 +53,13 @@ bool LinkController::activate(std::string link_name, std::shared_ptr<IdManagerAP
 	return false;
 }
 
-bool LinkController::deactivate(std::string link_name, std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI> link_configurator_sp) {
+bool LinkController::deactivate(std::string link_name) {
 	if (link_name.empty()) {
 		std::cout << "Empty link name!\n";
 		return false;
 	}
 
-	int id = id_manager_sp->getLinkId(link_name);
+	int id = m_id_manager_sp->getLinkId(link_name);
 	if (id == INVALID_ID) {
 		std::cout << "Invalid link name: '" << link_name << "'\n";
 		return false;
@@ -66,7 +71,7 @@ bool LinkController::deactivate(std::string link_name, std::shared_ptr<IdManager
 		return false;
 	}
 
-	if (link_configurator_sp->deactivate(id)) {
+	if (m_link_configurator_sp->deactivate(id)) {
 		m_activated_links.remove(link_name);
 		std::cout << "Deactivation successful!\n";
 		return true;

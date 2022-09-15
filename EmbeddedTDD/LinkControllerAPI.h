@@ -31,14 +31,19 @@ public:
 	static void freeInstance();
 
 	/**
+	 * Initialize the LinkControllerAPI.
+	 */
+	virtual void init(std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI>) = 0;
+
+	/**
      * Activate link
      */
-	virtual bool activate(std::string link_name, std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI> link_configurator_sp) = 0;
+	virtual bool activate(std::string link_name) = 0;
 
 	/**
 	 * Deactivate link
 	 */
-	virtual bool deactivate(std::string link_name, std::shared_ptr<IdManagerAPI> id_manager_sp, std::shared_ptr<LinkConfiguratorAPI> link_configurator_sp) = 0;
+	virtual bool deactivate(std::string link_name) = 0;
 };
 
 #endif
